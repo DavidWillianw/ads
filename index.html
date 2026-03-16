@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone RPG - Nova Versão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app-container">
+        <main class="main-view">
+            <header class="topbar">
+                <h2>Início</h2>
+            </header>
+
+            <section class="content-section">
+                <h3 class="section-title">Artistas no Airtable</h3>
+                <div id="artistsGrid" class="artists-grid">
+                    <p class="loading-text">A carregar artistas...</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3 class="section-title">Músicas (Clique para tocar no Spotify)</h3>
+                <div id="songsList" class="songs-list">
+                    <p class="loading-text">A carregar músicas...</p>
+                </div>
+            </section>
+        </main>
+
+        <nav class="side-nav">
+            <button class="nav-item active"><i class="fas fa-home"></i><span>Início</span></button>
+            <button class="nav-item"><i class="fas fa-search"></i><span>Buscar</span></button>
+            <button class="nav-item"><i class="fas fa-chart-line"></i><span>Charts</span></button>
+            <button class="nav-item"><i class="fas fa-microphone-alt"></i><span>Estúdio</span></button>
+        </nav>
+
+        <div class="spotify-player-container">
+            <iframe id="spotifyPlayer" 
+                src="https://open.spotify.com/embed/track/46oR6X3k4Mv0qMtzbE8H5h?utm_source=generator&theme=0" 
+                width="100%" height="90" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
